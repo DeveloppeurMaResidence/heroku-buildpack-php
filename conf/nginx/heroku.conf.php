@@ -34,6 +34,10 @@ http {
     }
 
     server {
+        if ($new_uri) {
+           return 301 $new_uri;
+        }
+
         # define an easy to reference name that can be used in try_files
         location @heroku-fcgi {
             include fastcgi_params;
