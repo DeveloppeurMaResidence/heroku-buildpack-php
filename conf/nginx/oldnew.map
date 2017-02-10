@@ -1,4 +1,15 @@
 default "";
+/activite /;
+/associations /;
+/actualites /;
+/aide-aux-personnes-agees /;
+/evenements?direction=a-venir /;
+/annuaire/associations /;
+/annuaire/collectivites /;
+/annuaire/commerces /;
+/annuaire/communautes /;
+/annuaire/communautes/national /;
+/annuaire/voisins /;
 /paris /;
 /marseille /;
 /lyon /;
