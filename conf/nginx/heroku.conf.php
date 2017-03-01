@@ -34,6 +34,11 @@ http {
     }
 
     server {
+        # Redirect all old mobile user to preprod
+        if ($http_x_mr_mobile_app) {
+            return 301 https://www.preprod.ma-residence.fr$request_uri;
+        }
+
         if ($new_uri) {
            return 301 $new_uri;
         }
