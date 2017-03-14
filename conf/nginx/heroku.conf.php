@@ -34,6 +34,10 @@ http {
     }
 
     server {
+        if ($host = 'beta.ma-residence.fr') {
+            rewrite ^/(.*)$ https://www.ma-residence.fr/$1 permanent;
+        }
+
         # Redirect all old mobile user to preprod
         if ($http_x_mr_mobile_app) {
             return 301 https://www.preprod.ma-residence.fr$request_uri;
